@@ -22,9 +22,9 @@ const Events = () => {
                 <h1 className='text-[#ec0a30] text-center md:text-4xl text-[25px] font-semibold'>✦ Upcoming Events</h1>
             </div>
             <div className='flex gap-3 md:gap-8 justify-center'>
-                <button className='text-white border border-white px-5 py-2 rounded-full text-center text-sm font-light cursor-pointer'>Religious</button>
-                <button className='text-white border border-white px-5 py-2 rounded-full text-center text-sm font-light cursor-pointer'>Social</button>
-                <button className='text-white border border-white px-5 py-2 rounded-full text-center text-sm font-light cursor-pointer'>Charity</button>
+                <button className='text-white hover:bg-white hover:text-black border border-white px-5 py-2 rounded-full text-center text-sm font-light cursor-pointer'>Religious</button>
+                <button className='text-white hover:bg-white hover:text-black border border-white px-5 py-2 rounded-full text-center text-sm font-light cursor-pointer'>Social</button>
+                <button className='text-white hover:bg-white hover:text-black border border-white px-5 py-2 rounded-full text-center text-sm font-light cursor-pointer'>Charity</button>
             </div>
         </div>
       </div>
@@ -142,7 +142,6 @@ const Events = () => {
                     ) : (
                         <p className='text-gray-600 font-light'>Join us for a meaningful charity event to support underprivileged communities. Your presence will make a difference.</p>
                     )}
-                    
 
                     {/* button div */}
                     <div>
@@ -182,7 +181,6 @@ const Events = () => {
                     ) : (
                         <p className='text-gray-600 font-light'>Join us for a meaningful charity event to support underprivileged communities. Your presence will make a difference.</p>
                     )}
-                    
 
                     {/* button div */}
                     <div>
