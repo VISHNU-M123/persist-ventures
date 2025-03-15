@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ handleModal }) => {
 
   const [menu, setMenu] = useState(false);
   const [showEventOptions, setShowEventOptions] = useState(false);
@@ -19,13 +20,13 @@ const Navbar = () => {
         <div className='flex justify-center w-full'>
           <div className='hidden sm:block'>
             <ul className='flex text-slate-800 gap-10 text-md'>
-                <li className='cursor-pointer text-white hover:text-red-500 text-sm font-normal'>Home</li>
+                <Link to={'/'}><li className='cursor-pointer text-white hover:text-red-500 text-sm font-normal'>Home</li></Link>
                 <li className='cursor-pointer text-sm font-normal' onClick={toggleEventOptions}>
                   <p className='text-white hover:text-red-500'>Events</p>
                   {showEventOptions && (
                     <div className='absolute bg-red-500 rounded mt-2 py-2 shadow-md w-50'>
-                      <div className='py-1 px-3 font-normal text-white hover:bg-red-100 hover:text-red-500 cursor-pointer'>Create Event</div>
-                      <div className='py-1 px-3 font-normal text-white hover:bg-red-100 hover:text-red-500 cursor-pointer'>All Events</div>
+                      <div className='py-1 px-3 font-normal text-white hover:bg-red-100 hover:text-red-500 cursor-pointer' onClick={handleModal}>Create Event</div>
+                      <Link to={'/events'}><div className='py-1 px-3 font-normal text-white hover:bg-red-100 hover:text-red-500 cursor-pointer'>All Events</div></Link>
                     </div>
                   )}
                 </li>
@@ -59,7 +60,11 @@ const Navbar = () => {
           <li className='hover:text-red-500 text-white text-sm font-normal' onClick={toggleEventOptions}>Event
             {showEventOptions && (
               <div className='bg-red-500 rounded-xl mt-2 p-2 px-5 shadow-md'>
-                <div className='py-1 px-3 font-normal hover:bg-gray-100 cursor-pointer'>Create Event</div>
+                <div className='py-1 px-3 font-normal hover:bg-gray-100 cursor-pointer' onClick={(e) => {
+                  e.stopPropagation();
+                  handleModal();
+                  setMenu(false); // Close menu after clicking "Create Event"
+              }}>Create Event</div>
                 <div className='py-1 px-3 font-normal hover:bg-gray-100 cursor-pointer'>All Events</div>
               </div>
             )}

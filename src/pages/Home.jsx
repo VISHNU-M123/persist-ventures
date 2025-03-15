@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import EventForm from '../components/EventForm'
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);  // Add state for modal
+
+  const handleModal = () => {  // Add handleModal function
+    setShowModal(!showModal);
+  }
   return (
     <div className='bg-black'>
-      <Navbar/>
+      <Navbar handleModal={handleModal}/>
         {/* main div */}
       <div className='lg:px-44 px-5'>
         {/* left and right */}
@@ -288,6 +294,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {showModal && (
+        <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
+          <div className='relative rounded-lg'>
+            <button className='absolute top-3 right-3 text-white hover:text-black text-2xl bg-red-500 rounded-full w-10 h-10 cursor-pointer' onClick={handleModal}>x</button>
+            <EventForm />
+          </div>
+        </div>
+      )}
         <Footer/>
     </div>
   )

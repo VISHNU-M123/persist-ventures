@@ -22,6 +22,7 @@ import event_card_img_1 from './event-card-img.webp'
 import calendar_icon from './calendar-icon.png'
 import clock_icon from './clock-icon.png'
 import arrow_right_up from './arrow-right-up.png'
+import location from './location.png'
 
 export const assets = {
     logo,
@@ -47,5 +48,6 @@ export const assets = {
     event_card_img_1,
     calendar_icon,
     clock_icon,
-    arrow_right_up
+    arrow_right_up,
+    location
 }
