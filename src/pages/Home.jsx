@@ -3,6 +3,7 @@ import { assets } from '../assets/assets'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import EventForm from '../components/EventForm'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);  // Add state for modal
@@ -22,7 +23,7 @@ const Home = () => {
                 <h1 className='text-white text-[32px] lg:text-[55px] md:text-[44px] font-extrabold leading-[1.1] tracking-[-2px]'>Connecting People <br /> <span className='gradient-text'>Across Faiths & Interests</span> </h1>
                 <p className='text-white mt-3'>Communion helps you discover events, connect with people of different faiths, and build a stronger community through shared experiences.</p>
                 <div className='flex sm:flex-row flex-col mt-3 gap-5'>
-                  <button className='text-white bg-[#ec0a30] hover:bg-[#701313] px-5 py-2 rounded-lg cursor-pointer'>Explore Events</button>
+                  <Link to={'/events'}><button className='text-white bg-[#ec0a30] hover:bg-[#701313] px-5 py-2 rounded-lg cursor-pointer'>Explore Events</button></Link>
                   <button className='text-white border hover:bg-white hover:text-black border-white px-5 py-2 rounded-lg cursor-pointer'>Contact Us</button>
                 </div>
                 <div className='mt-3 flex flex-col md:flex-row items-center gap-3'>
