@@ -28,10 +28,7 @@ const Events = () => {
                         <h1 className='text-white text-center md:text-4xl text-[25px] font-semibold'>We Helped Communities Connect & Flourish</h1>
                         <h1 className='text-[#ec0a30] text-center md:text-4xl text-[25px] font-semibold'>✦ Upcoming Events</h1>
                     </div>
-                    <EventFilter 
-            onFilterChange={handleFilterChange}
-            activeCategory={activeCategory}
-          />
+                    <EventFilter onFilterChange={handleFilterChange} activeCategory={activeCategory} />
                 </div>
             </div>
 

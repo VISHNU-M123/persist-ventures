@@ -12,9 +12,7 @@ const EventCard = ({ category }) => {
   }, []);
 
   // Filter events based on category
-  const filteredEvents = category ? 
-    events.filter(event => event.category === category) : 
-    events;
+  const filteredEvents = category ? events.filter(event => event.category === category) : events;
 
   const toggleDetails = (cardId) => {
     setShowDetails(prev => ({
@@ -31,11 +29,7 @@ const EventCard = ({ category }) => {
             <div key={event.id} className="w-full p-3 bg-white rounded-lg">
               <div className="relative">
                 {event.image && (
-                  <img 
-                    src={event.image} 
-                    alt="" 
-                    className="w-full h-[200px] object-cover rounded-lg"
-                  />
+                  <img src={event.image} alt="" className="w-full h-[200px] object-cover rounded-lg"/>
                 )}
                 <div className="absolute top-3 right-3 bg-white flex flex-col items-center px-3 py-2 rounded-lg">
                   <span className="text-gray-600 text-sm">

@@ -1,4 +1,3 @@
-// EventFilter.jsx
 import React from 'react';
 
 const EventFilter = ({ onFilterChange, activeCategory }) => {
