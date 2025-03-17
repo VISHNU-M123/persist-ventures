@@ -65,7 +65,7 @@ const Navbar = ({ handleModal }) => {
                   handleModal();
                   setMenu(false); // Close menu after clicking "Create Event"
               }}>Create Event</div>
-                <div className='py-1 px-3 font-normal hover:bg-gray-100 cursor-pointer'>All Events</div>
+                <Link to={'/events'}><div className='py-1 px-3 font-normal hover:bg-gray-100 cursor-pointer'>All Events</div></Link>
               </div>
             )}
           </li>
